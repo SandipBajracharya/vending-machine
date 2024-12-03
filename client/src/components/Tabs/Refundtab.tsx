@@ -1,11 +1,11 @@
 import { Match, Show, Switch, useContext } from "solid-js";
 import { ProductContext } from "../../contexts/ProductProvider";
 import ProductItem from "../Product/ProductItem";
-import NoData from "../NoData";
 import Button from "../Form/Button";
 import HighlightMessage from "../HighlightMessage";
 import { ProductContextProviderType } from "../../types/product";
 import { useRefund } from "../../hooks/refund";
+import Loading from "../Loading";
 
 export default function RefundTab() {
   const {
@@ -22,7 +22,7 @@ export default function RefundTab() {
   } = useRefund(triggerNewCycle, processRefundProduct, error);
 
   return (
-    <Show when={productList.length > 0} fallback={<NoData />}>
+    <Show when={productList.length > 0} fallback={<Loading />}>
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
         {productList.map((product) => {
           return (

@@ -1,6 +1,5 @@
-import { createEffect, createSignal, Show, useContext } from "solid-js";
+import { Show, useContext } from "solid-js";
 import ProductItem from "../Product/ProductItem";
-import NoData from "../NoData";
 import { ProductContext } from "../../contexts/ProductProvider";
 import ItemList from "../Product/ItemList";
 import Payment from "../Payment";
@@ -12,6 +11,7 @@ import {
 } from "../../types/product";
 import { useCart } from "../../hooks/cart";
 import { DispatchDataType } from "../../types/global";
+import Loading from "../Loading";
 
 const resetDispatchData = {
   dispatchedProducts: [],
@@ -64,7 +64,7 @@ export default function PurchaseTab() {
 
   return (
     <>
-      <Show when={products.length > 0} fallback={<NoData />}>
+      <Show when={products.length > 0} fallback={<Loading />}>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {products.map((product) => {
             return (
