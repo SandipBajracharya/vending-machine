@@ -1,0 +1,44 @@
+{
+  "name": "vending-machine-client",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "vite",
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview",
+    "test": "jest"
+  },
+  "author": {
+    "name": "Sandeep Bajracharya"
+  },
+  "type": "module",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.26.0",
+    "@babel/preset-env": "^7.26.0",
+    "@babel/preset-typescript": "^7.26.0",
+    "@solidjs/testing-library": "^0.8.10",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@types/jest": "^29.5.14",
+    "babel-jest": "^29.7.0",
+    "autoprefixer": "^10.4.17",
+    "babel-preset-jest": "^29.6.3",
+    "babel-preset-solid": "^1.9.3",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "jsdom": "^25.0.1",
+    "postcss": "^8.4.33",
+    "solid-devtools": "^0.29.2",
+    "solid-jest": "^0.2.0",
+    "tailwindcss": "^3.4.1",
+    "ts-jest": "^29.2.5",
+    "vite": "^5.0.11",
+    "vite-plugin-solid": "^2.8.2"
+  },
+  "dependencies": {
+    "@solidjs/router": "^0.9.0",
+    "axios": "^1.7.8",
+    "solid-js": "^1.8.11"
+  }
+}
